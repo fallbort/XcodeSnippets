@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ocmrequestdata</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>-(void)requestWithProductName:(NSString*)productName {
+
+    if (page&lt;1) {
+        page = 1;
+    }
+    NSString *pageStr = [NSString stringWithFormat:@"%d",page];
+    NSMutableDictionary *dic = @{@"keyword":productName,@"page":pageStr,@"size":@"10"}.mutableCopy;
+    NSString* url = @"/op/product/search";
+
+    static NSInteger requestCount = 0;
+    requestCount += 1;
+    NSInteger curRequestCount = requestCount;
+    __weak __typeof(self)weakSelf = self;
+    [[YZNetworkManager sharedManager] yz_getWithParam:dic port:@"" path:url frontIP:@"" showLoading:NO success:^(YZResponse * _Nullable res) {
+        if (curRequestCount == requestCount) {
+            __strong __typeof(weakSelf)strongSelf = weakSelf;
+            if (res.code == 200) {
+
+                NSArray *arr = [[NSArray alloc]initWithArray:res.data[@"list"]];
+
+                if (page == 1) {
+                    _dataArr = [[NSMutableArray alloc]init];
+                }
+
+                for (NSDictionary *item in arr) {
+                    [_dataArr addObject:item];
+                }
+
+                if (_dataArr.count&gt;0) {
+                    [self removeNoDataImage];
+                }else{
+                    [self showNoDataImage];
+                }
+                
+                [self.tableView reloadData];
+            }else{
+                [YJProgressHUD showMessage:res.message inView:self.parentViewController.view];
+            }
+            [self.tableView.mj_footer endRefreshing];
+            [self.tableView.mj_header endRefreshing];
+        }
+        
+    } failure:^(YZResponse * _Nullable res) {
+        if (curRequestCount == requestCount) {
+            [self.tableView.mj_footer endRefreshing];
+            [self.tableView.mj_header endRefreshing];
+            [YJProgressHUD showMessage:res.message inView:self.parentViewController.view];
+        }
+    }];
+
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>955187D4-49C2-49DE-89B2-BA9C738750D5</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ocmrequestdata</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

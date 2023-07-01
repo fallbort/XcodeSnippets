@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ocmtableviewset</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.mj_header.hidden = NO;
+    self.tableView.mj_footer.hidden = NO;
+    CGFloat safeBottom = self.view.safeAreaInsets.bottom + 10.0 + tableExtraInsetBottom;
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, safeBottom, 0);
+    //高度自动计算
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    //估算高度
+    self.tableView.estimatedRowHeight = 150;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.tableView registerClass:[CGGLTableViewCell class] forCellReuseIdentifier:@"CGGLTableViewCell"];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>DCAFD56F-CE6E-40F4-9B0F-65F7AC0B2CE3</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ocmtableviewset</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

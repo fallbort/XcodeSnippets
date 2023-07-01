@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>atmakeextensionweakvar</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>private var MeMeLivePusherWeakDeleagte = "MeMeLivePusherWeakDeleagte"
+
+extension MeMeLivePusher {
+    weak var liveDelegate: LivePushManagerDelegate? {
+        get {
+            let weakArray = objc_getAssociatedObject(self, &amp;MeMeLivePusherWeakDeleagte) as? WeakReferenceArray&lt;LivePushManagerDelegate&gt;
+            if let object = weakArray?.allObjects().first as? LivePushManagerDelegate {
+                return object
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            let weakArray = WeakReferenceArray&lt;LivePushManagerDelegate&gt;()
+            if let object = newValue {
+                weakArray.addObject(object)
+            }
+            objc_setAssociatedObject(self, &amp;MeMeLivePusherWeakDeleagte, weakArray, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>1AE5C8FE-D650-43B1-86CA-D3F772367427</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>atmakeextensionweakvar</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

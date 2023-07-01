@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ocmrequestsimple</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>NSString *userid = [NSString stringWithFormat:@"%@",[UserManager sharedUserManager].curUserInfo.user_id];
+    NSString* url = @"/op/requisition/delete";
+    NSDictionary* dic = @{@"requisition_id":self.requisitionId,@"user_id":userid};
+    __weak __typeof(self)weakSelf = self;
+    [[YZNetworkManager sharedManager] yz_postWithParam:dic port:@"" path:url frontIP:@"" showLoading:YES success:^(YZResponse * _Nullable res) {
+        __strong __typeof(weakSelf)strongSelf = weakSelf;
+        if (res.code == 200) {
+            strongSelf.state = CGGLRequisitionState_Deleted;
+            [YJProgressHUD showMessage:@"操作成功" inView:strongSelf.navigationController.view];
+            [strongSelf.navigationController popViewControllerAnimated:YES];
+        }else{
+            [YJProgressHUD showMessage:res.message inView:weakSelf.view];
+        }
+    } failure:^(YZResponse * _Nullable res) {
+        [YJProgressHUD showMessage:res.message inView:weakSelf.view];
+    }];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3D2169A7-43D1-4B75-9928-BEA099965F23</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ocmrequestsimple</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

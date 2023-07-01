@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ocmcreateTCell</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>@interface CGGLTableViewCell ()
+
+@end
+
+@implementation CGGLTableViewCell
+
+#pragma mark &lt;&gt;外部变量
+
+#pragma mark &lt;&gt;外部block
+
+#pragma mark &lt;&gt;生命周期开始
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+      
+        self.backgroundColor =  UIColor.clearColor;
+        self.contentView.backgroundColor = UIColor.clearColor;
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        [self setupViews];
+    }
+    return self;
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    // Initialization code
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+}
+
+-(void)setupViews {
+    
+}
+
+-(void)prepareForReuse {
+    [super prepareForReuse];
+}
+
+#pragma mark &lt;&gt;功能性方法
+
+#pragma mark &lt;&gt;内部View
+
+#pragma mark &lt;&gt;内部UI变量
+
+#pragma mark &lt;&gt;内部数据变量
+
+#pragma mark &lt;&gt;内部block
+
+
+@end</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E8C945A9-530E-4FD4-8369-6115DC917A7A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ocmcreateTCell</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

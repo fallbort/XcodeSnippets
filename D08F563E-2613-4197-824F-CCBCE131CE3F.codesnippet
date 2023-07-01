@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ocmcreatevc</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>@interface CommodityViewController ()
+
+@end
+
+@implementation CommodityViewController
+
+#pragma mark &lt;&gt;外部变量
+
+#pragma mark &lt;&gt;外部block
+
+#pragma mark &lt;&gt;生命周期开始
+-(instancetype)init {
+    self = [super initWithNibName:nil bundle:nil];
+    return self;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    [self setupViews];
+}
+
+-(void)setupViews {
+    
+}
+
+#pragma mark &lt;&gt;功能性方法
+
+#pragma mark &lt;&gt;内部View
+
+#pragma mark &lt;&gt;内部UI变量
+
+#pragma mark &lt;&gt;内部数据变量
+
+#pragma mark &lt;&gt;内部block
+
+
+@end</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>D08F563E-2613-4197-824F-CCBCE131CE3F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ocmcreatevc</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

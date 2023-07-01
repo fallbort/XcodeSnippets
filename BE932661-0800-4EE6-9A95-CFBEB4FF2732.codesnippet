@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>atmakeattributePlaceholder</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>var nameColor:UIColor = UIColor.hexString(toColor: "#ddffffff")!
+            let newColor = ShowUserInfo.mysteryNameColor
+            let realPlaceHolderValue = name
+            let placeHolder1 = "###1"
+            var totalNameReal = String(format: NELocalize.localizedString("RB_new1"), placeHolder1,game)
+            var range1:NSRange?
+            let rangeTmp1 = (totalNameReal as NSString).range(of: placeHolder1)
+            if rangeTmp1.location != NSNotFound {
+                totalNameReal = totalNameReal.replace(placeHolder1, withString: realPlaceHolderValue)
+                range1 = NSRange.init(location: rangeTmp1.location, length: realPlaceHolderValue.count)
+            }
+            let totalAttrStr = NSMutableAttributedString(string: totalNameReal, attributes: [
+                .font: Theme.Font.medium(size:14),
+                .foregroundColor: nameColor
+            ])
+            
+            if let range1 = range1 {
+                totalAttrStr.addAttributes([
+                    .font: Theme.Font.medium(size:14),
+                    .foregroundColor: newColor
+                ], range: range1)
+            }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>BE932661-0800-4EE6-9A95-CFBEB4FF2732</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>atmakeattributePlaceholder</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

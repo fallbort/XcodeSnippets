@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>atmakebtnview</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>fileprivate lazy var gotoBtn: UIView = {
+        let view =  UIView()
+        let label = UILabel()
+        label.font = Theme.Font.medium(size: 14)
+        label.textColor = UIColor.hexString(toColor: "ff85a9")
+        let icon = UIImageView()
+        icon.image = UIImage.init(named: "newusergift/invalid_name")
+        view.addSubview(label)
+        view.addSubview(icon)
+        label.sizeToFit()
+        label.frame = CGRect.init(x: 0, y: 0, width: label.width, height: 18)
+        icon.frame = CGRect.init(x: label.width + 2, y: 0, width: 18, height: 18)
+        view.frame = CGRect.init(x: 0, y: 0, width: icon.right, height: 18)
+        view.handleTapGesture { [weak self] in
+            if let h5Url = self?.h5Url {
+                
+            }
+        }
+        return view
+    }()</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3D1685F0-B583-4540-903B-FBB7348985CA</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>atmakebtnview</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

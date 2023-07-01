@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ocmlazybtn</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>-(UIButton *)openCommodityBtn {
+    if (!_openCommodityBtn) {
+        _openCommodityBtn = [[UIButton alloc]init];
+        [_openCommodityBtn setBackgroundWithColor:MKTVRGBA(71, 112, 245, 1) forState:UIControlStateNormal];
+        [_openCommodityBtn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+        _openCommodityBtn.titleLabel.font = FFontMiddle;
+        _openCommodityBtn.layer.cornerRadius = 8.0;
+        _openCommodityBtn.clipsToBounds = YES;
+        [_openCommodityBtn setPadding:0 vertical:0 horizontal:18];
+    }
+    return _openCommodityBtn;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>2D3DFD2A-AD4B-442B-ABF8-4EF0AC5681E0</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ocmlazybtn</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

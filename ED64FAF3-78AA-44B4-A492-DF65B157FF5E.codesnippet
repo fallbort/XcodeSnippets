@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ocmloaddata</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>-(void)loadData {
+    NSDictionary *dic = @{};
+
+    [[YZNetworkManager sharedManager] lc_postWithParam:dic path:@"/message/push/user" showLoading:YES timeout:2.0 success:^(YZResponse * _Nullable res) {
+       
+        if (res.code == 200) {
+
+        }else{
+            [YJProgressHUD showMessage:res.message inView:self.view];
+        }
+    } failure:^(YZResponse * _Nullable res) {
+        [YJProgressHUD showMessage:res.message inView:self.view];
+    }];
+    
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>ED64FAF3-78AA-44B4-A492-DF65B157FF5E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ocmloaddata</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

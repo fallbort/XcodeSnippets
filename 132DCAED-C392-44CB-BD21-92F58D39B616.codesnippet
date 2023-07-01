@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>atmakeattributestring2</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>var nameColor:UIColor = UIColor.hexString(toColor: "#888888")!
+        let newColor:UIColor = .black
+        let placeHolder1 = "###1"
+        let placeHolder2 = "###2"
+        var totalNameReal = String(format: NELocalize.localizedString("我已阅读并同意%@和%@",comment: "totest"), placeHolder1,placeHolder1)
+        
+        var rangeArray:[NSRange?] = []
+        if (true) {
+            let realPlaceHolderValue1 = NELocalize.localizedString("《用户协议》",comment: "totest")
+            var range1:NSRange?
+            let rangeTmp1 = (totalNameReal as NSString).range(of: placeHolder1)
+            if rangeTmp1.location != NSNotFound {
+                totalNameReal = totalNameReal.replace(placeHolder1, withString: realPlaceHolderValue1)
+                range1 = NSRange.init(location: rangeTmp1.location, length: realPlaceHolderValue1.count)
+            }
+            rangeArray.append(range1)
+        }
+        
+        if (true) {
+            let realPlaceHolderValue1 = NELocalize.localizedString("《隐私政策》",comment: "totest")
+            var range1:NSRange?
+            let rangeTmp1 = (totalNameReal as NSString).range(of: placeHolder1)
+            if rangeTmp1.location != NSNotFound {
+                totalNameReal = totalNameReal.replace(placeHolder1, withString: realPlaceHolderValue1)
+                range1 = NSRange.init(location: rangeTmp1.location, length: realPlaceHolderValue1.count)
+            }
+            rangeArray.append(range1)
+        }
+        
+        let totalAttrStr = NSMutableAttributedString(string: totalNameReal, attributes: [
+            .font: ThemeLite.Font.medium(size:14),
+            .foregroundColor: nameColor
+        ])
+        
+        for range in rangeArray {
+            if let range = range {
+                totalAttrStr.addAttributes([
+                    .font: ThemeLite.Font.medium(size:14),
+                    .foregroundColor: newColor
+                ], range: range)
+            }
+        }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>132DCAED-C392-44CB-BD21-92F58D39B616</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>atmakeattributestring2</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

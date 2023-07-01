@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ocmcreatepresentvc</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>@interface CGGLPurchaseAuditVC ()
+@property (nonatomic, strong) UIView *contentView;
+@end
+
+@implementation CGGLPurchaseAuditVC
+
+#pragma mark &lt;&gt;外部变量
+
+#pragma mark &lt;&gt;外部block
+
+#pragma mark &lt;&gt;生命周期开始
+-(instancetype)init {
+    self = [super initWithNibName:nil bundle:nil];
+    self.modalPresentationStyle = UIModalPresentationOverFullScreen;
+    return self;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    [self setupViews];
+}
+
+-(void)setupViews {
+    self.view.backgroundColor = [UIColor hexStringToColor:@"99000000"];
+    UIView* backView = [[UIView alloc] init];
+    UIButton* actionBtn = [[UIButton alloc] init];
+    [self.view addSubview:backView];
+    [backView addSubview:actionBtn];
+    [backView addSubview:self.contentView];
+    
+    [backView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(0);
+        make.right.mas_equalTo(0);
+        make.top.mas_equalTo(0);
+        make.bottom.mas_equalTo(0);
+    }];
+    [actionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(0);
+        make.right.mas_equalTo(0);
+        make.top.mas_equalTo(0);
+        make.bottom.mas_equalTo(0);
+    }];
+    
+    [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.mas_equalTo(0);
+        make.width.mas_equalTo(100);
+        make.height.mas_equalTo(100);
+    }];
+    
+    __weak __typeof(self)weakSelf = self;
+    [actionBtn handleControlEvent:UIControlEventTouchUpInside closure:^{
+        [weakSelf dismissViewControllerAnimated:NO completion:nil];
+    }];
+    
+}
+
+#pragma mark &lt;&gt;功能性方法
+
+#pragma mark &lt;&gt;内部View
+-(UIView *)contentView {
+    if (!_contentView) {
+        _contentView = [[UIView alloc]init];
+        _contentView.backgroundColor =  MKTVRGBA(222, 222, 222, 1);
+    }
+    return _contentView;
+}
+
+#pragma mark &lt;&gt;内部UI变量
+
+#pragma mark &lt;&gt;内部数据变量
+
+#pragma mark &lt;&gt;内部block
+
+
+@end
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>8CB826D5-9B8B-4F28-A637-81FA2907EF94</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ocmcreatepresentvc</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

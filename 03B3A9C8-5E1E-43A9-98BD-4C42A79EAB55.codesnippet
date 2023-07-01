@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>atmakelazybtn</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>fileprivate lazy var anchorIcon: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named:""), for: .normal)
+        button.setTitle(NELocalize.localizedString("tyrant_tab_broadcaster"), for: .normal)
+        button.isUserInteractionEnabled = false
+        button.contentEdgeInsets = UIEdgeInsets.init(top: 0, left: 8, bottom: 0, right: 8)
+        button.titleLabel?.font = Theme.Font.regular(size: 10)
+        button.setTitleColor(UIColor(hex:0x4b3d4c), for: .normal)
+        button.backgroundColor = UIColor(hex: 0xdfcee6)
+        button.layer.cornerRadius = 7
+        button.clipsToBounds = true
+        return button
+    }()</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>03B3A9C8-5E1E-43A9-98BD-4C42A79EAB55</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>atmakelazybtn</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

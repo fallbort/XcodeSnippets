@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ocmcreateclass</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>@interface CGGLObject ()
+
+@end
+
+@implementation CGGLObject
+
+#pragma mark &lt;&gt;外部变量
+
+#pragma mark &lt;&gt;外部block
+
+#pragma mark &lt;&gt;生命周期开始
+
+#pragma mark &lt;&gt;功能性方法
+
+#pragma mark &lt;&gt;内部View
+
+#pragma mark &lt;&gt;内部UI变量
+
+#pragma mark &lt;&gt;内部数据变量
+
+#pragma mark &lt;&gt;内部block
+
+
+@end</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>03C678A2-9FC0-41FD-9F38-B9E5FB88D8EE</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ocmcreateclass</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

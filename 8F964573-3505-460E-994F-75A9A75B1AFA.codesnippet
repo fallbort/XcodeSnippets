@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>atmakevartableview</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>fileprivate lazy var tableView: UITableView = {
+        let tableView: UITableView = UITableView(frame: CGRect(x: 0, y: 0, width: self.view.width, height: self.view.height))
+        tableView.registerClass(TreasureHistoryCell.self)
+        tableView.allowsSelection = false
+        tableView.separatorStyle = .none
+        tableView.scrollsToTop = true
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.rowHeight = 54
+        tableView.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 10, right: 0)
+        tableView.emptyView = emptyView
+        tableView.mj_footer = createRefreshFooter()
+        tableView.scrollEnabledWhenEmpty = false
+        tableView.backgroundColor = UIColor.clear
+        if #available(iOS 15.0, *) {
+            tableView.sectionHeaderTopPadding = 0
+        }
+        return tableView
+    }()</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>8F964573-3505-460E-994F-75A9A75B1AFA</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>atmakevartableview</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

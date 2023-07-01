@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ocmcreatecellview</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UILabel* cellView1 = [cell.contentView viewWithTag:111];
+if (cellView1 == nil) {
+    UILabel* firstLabel = [[UILabel alloc]init];
+    firstLabel.font = FFontMiddle;
+    firstLabel.textAlignment = NSTextAlignmentLeft;
+    firstLabel.textColor = UIColor.redColor;
+    firstLabel.numberOfLines = 0;
+    cellView1 = firstLabel;
+    cellView1.tag = 111;
+    [cell.contentView addSubview:cellView1];
+    [cellView1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(10);
+        make.right.mas_equalTo(0);
+        make.top.mas_equalTo(0);
+        make.bottom.mas_equalTo(0);
+        make.width.mas_equalTo(0);
+        make.height.mas_equalTo(0);
+    }];
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>58C57456-D0C0-47A7-B724-6E24D383C47A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ocmcreatecellview</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

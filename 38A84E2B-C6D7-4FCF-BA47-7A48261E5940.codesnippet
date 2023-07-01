@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>atmakecolorview</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>let symbolBackView = UIImageView()
+        symbolBackView.image =  UIImage.init(color: UIColor.hexString(toColor: "66000000")!, size: CGSize.init(width: 20, height: 20), roundingCorners: [.allCorners], cornerRadius: CGSize.init(width:10,height:10), shadowColor: nil).stretchableImage(withLeftCapWidth: 10, topCapHeight: 10)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>38A84E2B-C6D7-4FCF-BA47-7A48261E5940</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>atmakecolorview</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

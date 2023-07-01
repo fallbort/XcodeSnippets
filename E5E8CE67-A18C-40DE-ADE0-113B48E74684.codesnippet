@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>atmakeserviceinput</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import Foundation
+import MeMeKit
+import ZRouter
+import ZIKRouter
+
+public protocol ConfigServiceInput : FetchTypeProtocol {
+    static var buildMode: BuildMode {get set}
+    
+    static var memeConfig: MemeConfig? {get}
+}
+
+extension RoutableService where Protocol == ConfigServiceInput {
+    public init() { self.init(declaredTypeName: "ConfigServiceInput") }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E5E8CE67-A18C-40DE-ADE0-113B48E74684</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>atmakeserviceinput</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
