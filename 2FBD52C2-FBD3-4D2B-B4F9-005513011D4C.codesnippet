@@ -19,6 +19,8 @@ class BannerTableCell : UITableViewCell {
     //MARK:&lt;&gt;生命周期开始
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.backgroundColor = .clear
+        self.contentView.backgroundColor = .clear
         self.selectionStyle = .none
         setupViews()
     }
