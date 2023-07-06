@@ -16,7 +16,6 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:NO];
     CGGLTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CGGLTableViewCell" forIndexPath:indexPath];
 
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -24,7 +23,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>611FB1B9-0E23-4C05-BE19-2FEF0EDF9DF4</string>
