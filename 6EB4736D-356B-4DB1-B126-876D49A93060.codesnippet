@@ -11,7 +11,7 @@
 	<key>IDECodeSnippetContents</key>
 	<string>var extraDistanceLabel: UILabel = {
         let view = UILabel()
-        view.font = Theme.Font.regular(size: 10)
+        view.font = ThemeLite.Font.regular(size: 10)
         view.textColor =  UIColor.hexString(toColor: "#ff1e76")!
         return view
     }()</string>

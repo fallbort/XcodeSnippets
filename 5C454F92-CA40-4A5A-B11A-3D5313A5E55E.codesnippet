@@ -3,33 +3,30 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ColumnCodable Double Class</string>
+	<string>atmakescrollviewvar</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>class &lt;#Class name#&gt;: WCDBSwift.ColumnCodable {
-    typealias FundamentalType = Double
-    
-    required init?(with value: Double) {
-        
-    }
-    
-    func archivedValue() -&gt; Double? {
-        
-    }
-}
-</string>
+	<string>fileprivate lazy var scrollView: UIScrollView = {
+    let view: UIScrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height))
+    view.showsVerticalScrollIndicator = false
+    view.showsHorizontalScrollIndicator = false
+    view.contentInsetAdjustmentBehavior = .never
+    return view
+}()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>672ADC69-57B0-4E79-9B4B-3B14B7F633D3</string>
+	<string>5C454F92-CA40-4A5A-B11A-3D5313A5E55E</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>ColumnCodable Double Snippet</string>
+	<string>atmakescrollviewvar</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

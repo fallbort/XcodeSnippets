@@ -3,24 +3,35 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>atmakestringlocalized</string>
+	<string>atmakerequestcreate</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>NELocalize.localizedString("totest_aaa",comment: "totest")</string>
+	<string>MeMeCommonNetwork.request(ConfigAPI.getIP) { result in
+    switch result {
+    case let .success(dict):
+        if let info = dict as? String {
+            completion(.success(info.trim()))
+        } else {
+            completion(.failure(MemeCommonError.normal(code: 9999, msg: "", isCustom: true)))
+        }
+    case let .failure(error):
+        completion(.failure(error))
+    }
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>89A60CE3-64D7-4E57-A4DD-57990F3B774E</string>
+	<string>BBC2A374-6A3D-46CE-AB82-448F4918F30A</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>atmakestringlocalized</string>
+	<string>atmakerequestcreate</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
