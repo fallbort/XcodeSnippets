@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>atmakerealrequest</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>fileprivate static func realRequestConfig(completion: @escaping (Result&lt;ConfigInfo, MemeCommonError&gt;) -&gt; Void) {
+        MemeNetwork.request(ConfigAPI.getService, success: { dict in
+            if let dict = dict as? [String:Any],let infos = Mapper&lt;ConfigInfo&gt;().map(JSONObject: dict) {
+                 completion(.success(infos))
+             } else {
+                 let error = NSError(domain: MemeErrorDomain, code: 999, userInfo: nil)
+                 completion(.failure(MemeCommonError.normal(error)))
+             }
+         }, error: { (errorCode, errorMessage) in
+             let error = NSError(domain: MemeErrorDomain, code: errorCode, userInfo: [NSLocalizedDescriptionKey: errorMessage])
+             completion(.failure(MemeCommonError.normal(error)))
+         }) { error in
+             completion(.failure(error))
+         }
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3D63C60D-B958-4870-901E-01CD70D2E950</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>atmakerealrequest</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

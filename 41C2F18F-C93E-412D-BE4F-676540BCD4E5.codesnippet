@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>atmakesinglerequest</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>static func requestConfig(completion: ((Result&lt;ConfigInfo, MemeCommonError&gt;) -&gt; Void)? = nil) {
+        let values = self.configRequstKeeper.getStatusAndSetStartChanging(ids: [.config]) { statusValue in
+            if let statusValue = statusValue {
+                completion?(.success(statusValue))
+            }else{
+                completion?(.failure(.network))
+            }
+            
+        }
+        if let configInfo = values.status[.config] {
+            completion?(.success(configInfo))
+        }else{
+            if let changing = values.changingResult[.config],changing == true {
+                self.realRequestConfig { result in
+                    switch result {
+                    case let .success(info):
+                        self.configRequstKeeper.setStatus(id: .config, value: info)
+                        self.checkCurrentDeviceIp()
+                        
+                    case .failure(_):
+                        break
+                    }
+                    self.configRequstKeeper.setEndChanging(id: .config)
+                    
+                }
+            }
+        }
+        
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>41C2F18F-C93E-412D-BE4F-676540BCD4E5</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>atmakesinglerequest</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
