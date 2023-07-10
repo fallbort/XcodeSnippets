@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>atmakeviewlinebreak</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>lazy var tagBreakView: LineBreakBaseView = {
+    let breakView = LineBreakBaseView()
+    breakView.borderMargins = UIEdgeInsets.init(top: 10, left: 0, bottom: 0, right: 0)
+    breakView.maxLine = 900
+    breakView.marginX = 10.0   //cell段间距
+    breakView.marginY = 10.0  //cell行间距
+    let breakMaxWidth:CGFloat = UIScreen.main.bounds.width - 32.0
+    breakView.breakMaxWidth = breakMaxWidth
+    let font = ThemeLite.Font.pingfang(size: 14)
+    breakView.itemSizeClosure = { [weak self] (index) -&gt; CGSize? in
+        return CGSize.init(width: 72, height: 36)
+    }
+    breakView.itemLayoutClosure = { [weak self](frame,index,view,extra) -&gt; UIView? in
+        var newView = view
+        if newView == nil {
+            let oneView = UIButton()
+            newView = oneView
+            
+        }
+        newView?.frame = frame
+
+        return newView
+    }
+    return breakView
+}()</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E0209AA1-6500-4838-B201-6077325135C0</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>atmakeviewlinebreak</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
