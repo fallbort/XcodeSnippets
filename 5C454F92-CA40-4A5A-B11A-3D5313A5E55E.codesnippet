@@ -3,30 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ColumnCodable Int64 Class</string>
+	<string>atmakescrollviewvar</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>class &lt;#Class name#&gt;: WCDBSwift.ColumnCodable {
-    typealias FundamentalType = Int64
-    
-    required init?(with value: Int64) {
-        
-    }
-    
-    func archivedValue() -&gt; Int64? {
-        
-    }
-}
-</string>
+	<string>fileprivate lazy var scrollView: UIScrollView = {
+    let view: UIScrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height))
+    view.showsVerticalScrollIndicator = false
+    view.showsHorizontalScrollIndicator = false
+    view.contentInsetAdjustmentBehavior = .never
+    return view
+}()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>5BEA3B81-7345-4297-A545-227479728FD6</string>
+	<string>5C454F92-CA40-4A5A-B11A-3D5313A5E55E</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>ColumnCodable Int64 Snippet</string>
+	<string>atmakescrollviewvar</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

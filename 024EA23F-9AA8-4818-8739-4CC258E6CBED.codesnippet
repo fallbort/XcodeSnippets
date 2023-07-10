@@ -3,30 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ColumnCodable Double Class</string>
+	<string>atmakemapperto</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>class &lt;#Class name#&gt;: WCDBSwift.ColumnCodable {
-    typealias FundamentalType = Double
-    
-    required init?(with value: Double) {
-        
-    }
-    
-    func archivedValue() -&gt; Double? {
-        
-    }
-}
-</string>
+	<string>if let dict = dict as? [String:Any],
+                   let full = Mapper&lt;UserInfo&gt;().map(JSONObject: dict) {
+                    completion(.success(full))
+                } else {
+                    completion(.failure(MemeCommonError.normal(code: 9999, msg: "", isCustom: true)))
+                }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>672ADC69-57B0-4E79-9B4B-3B14B7F633D3</string>
+	<string>024EA23F-9AA8-4818-8739-4CC258E6CBED</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>ColumnCodable Double Snippet</string>
+	<string>atmakemapperto</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

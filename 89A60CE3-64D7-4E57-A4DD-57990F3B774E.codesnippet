@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>NELocalize.localizedString("totest_aaa")</string>
+	<string>NELocalize.localizedString("totest_aaa",comment: "totest")</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>89A60CE3-64D7-4E57-A4DD-57990F3B774E</string>
 	<key>IDECodeSnippetLanguage</key>

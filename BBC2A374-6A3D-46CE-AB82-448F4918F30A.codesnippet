@@ -3,21 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string></string>
+	<string>atmakerequestcreate</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>self.selectionStyle = UITableViewCellSelectionStyleNone;</string>
+	<string>MeMeCommonNetwork.request(ConfigAPI.getIP) { result in
+    switch result {
+    case let .success(dict):
+        if let info = dict as? String {
+            completion(.success(info.trim()))
+        } else {
+            completion(.failure(MemeCommonError.normal(code: 9999, msg: "", isCustom: true)))
+        }
+    case let .failure(error):
+        completion(.failure(error))
+    }
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>C53E8654-EBF0-42BF-BCAA-FD074C979E70</string>
+	<string>BBC2A374-6A3D-46CE-AB82-448F4918F30A</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>My Code Snippet</string>
+	<string>atmakerequestcreate</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
