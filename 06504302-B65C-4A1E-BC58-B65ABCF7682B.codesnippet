@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>atmakekeeperchanging</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>let values = self.configRequstKeeper.getStatusAndSetStartChanging(ids: [.config]) { statusValue in
+            if let statusValue = statusValue {
+                completion?(.success(statusValue))
+            }else{
+                completion?(.failure(.network))
+            }
+            
+        }
+        if let configInfo = values.status[.config], force == false {
+            completion?(.success(configInfo))
+        }else{
+            if let changing = values.changingResult[.config],changing == true {
+                MemeNetwork.request(ConfigAPI.getService) { result in
+                    switch result {
+                    case let .success(object):
+                        
+                    case .failure(_):
+                        break
+                    }
+                    self.configRequstKeeper.setEndChanging(id: .config)
+                }
+            }
+        }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>06504302-B65C-4A1E-BC58-B65ABCF7682B</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>atmakekeeperchanging</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
