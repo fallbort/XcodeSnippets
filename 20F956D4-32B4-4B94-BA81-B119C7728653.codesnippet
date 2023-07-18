@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>atmakebtnlazystatus</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>fileprivate lazy var gotoGameBtn: MeMeStatusButton = {
+        let button =  MeMeStatusButton()
+        button.layer.cornerRadius = 14.0
+        button.clipsToBounds = true
+        button.titleLabel?.font = ThemeLite.Font.pingfang(size: 14)
+        button.setTitleColor(UIColor.hexString(toColor: "#FD4186")!, for: .normal)
+        button.setTitleColor(UIColor.hexString(toColor: "#88FD4186")!, for: .highlighted)
+        button.setBackground(color: UIColor.white, forState: .normal)
+        button.setBackground(color: UIColor.white, forState: .highlighted)
+        button.layer.borderColor = UIColor.hexString(toColor: "FD4085")!.cgColor
+        button.layer.borderWidth = 1.0
+        button.setTitle(NELocalize.localizedString("关注",comment: "totest"), for: .normal)
+        button.selectedChangedBlock = { [weak button] isSelected in
+            guard let button = button else {return}
+            if button.isSelectedFake == true {
+                button.setTitleColor(UIColor.hexString(toColor: "#666666")!, for: .normal)
+                button.setTitleColor(UIColor.hexString(toColor: "#88666666")!, for: .highlighted)
+                button.setBackground(color: UIColor.white, forState: .normal)
+                button.setBackground(color: UIColor.white, forState: .highlighted)
+                button.layer.borderColor = UIColor.hexString(toColor: "#666666")!.cgColor
+                button.setTitle(NELocalize.localizedString("已关注",comment: "totest"), for: .normal)
+            }else{
+                button.setTitleColor(UIColor.hexString(toColor: "#FD4186")!, for: .normal)
+                button.setTitleColor(UIColor.hexString(toColor: "#88FD4186")!, for: .highlighted)
+                button.setBackground(color: UIColor.white, forState: .normal)
+                button.setBackground(color: UIColor.white, forState: .highlighted)
+                button.layer.borderColor = UIColor.hexString(toColor: "FD4085")!.cgColor
+                button.setTitle(NELocalize.localizedString("关注",comment: "totest"), for: .normal)
+            }
+        }
+        button.setPadding(0, vertical: 0, horizontal: 6)
+        return button
+    }()</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>20F956D4-32B4-4B94-BA81-B119C7728653</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>atmakebtnlazystatus</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

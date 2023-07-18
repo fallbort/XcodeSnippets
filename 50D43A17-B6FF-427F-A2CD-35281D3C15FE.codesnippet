@@ -3,22 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string></string>
+	<string>ocmtableviewtouch</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>
-</string>
+	<string>self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
+    UITapGestureRecognizer *tableViewGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(commentTableViewTouchInSide)];
+    tableViewGesture.numberOfTapsRequired = 1;
+    tableViewGesture.cancelsTouchesInView = NO;
+    [self.tableView addGestureRecognizer:tableViewGesture];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>4ED72A87-4759-4D22-AD21-FB187AABEE0E</string>
+	<string>50D43A17-B6FF-427F-A2CD-35281D3C15FE</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>My Code Snippet</string>
+	<string>ocmtableviewtouch</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

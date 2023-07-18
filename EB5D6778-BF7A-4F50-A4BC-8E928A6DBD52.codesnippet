@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>atmakeviewmodel_pageload</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import Foundation
+import MeMeKit
+import ObjectMapper
+import RxSwift
+import MeMeComponents
+
+class CommonLoadViewModel&lt;T:BaseMappable,V:MemeTargetType&gt; {
+    
+    //MARK: &lt;&gt;外部变量
+    
+    //MARK: &lt;&gt;外部block
+    
+    
+    //MARK: &lt;&gt;生命周期开始
+    init() {
+        
+    }
+    //MARK: &lt;&gt;功能性方法
+    func loadData(isNext:Bool,targetBlock:((_ page:Int,_ size:Int)-&gt;V),dataKey:String,complete:((_ hasNext:Bool?,MemeCommonError?)-&gt;())? = nil) {
+        let page = isNext ? curPage + 1 : 0
+        if loadingPage == 0 &amp;&amp; page == 0 {
+            return
+        }
+        loadingPage = page
+        let size = countPerPage
+        let target = targetBlock(page, size)
+        MemeNetwork.request(target) { [weak self] result in
+            if self?.loadingPage == page {
+                self?.loadingPage = nil
+                switch result {
+                case let .success(info):
+                    self?.curPage = page
+                    var users:[T] = []
+                    if let dict = info as? [String:Any],let recommends = dict[dataKey] {
+                        users = Mapper&lt;T&gt;().mapArray(JSONObject: recommends) ?? []
+                    }
+                    
+                    if page == 0 {
+                        self?.infosObser.onNext(users)
+                    }else {
+                        var oldUsers:[T] = (try? self?.infosObser.value()) ?? []
+                        oldUsers = oldUsers + users
+                        self?.infosObser.onNext(oldUsers)
+                    }
+                    complete?(users.count &gt;= size,nil)
+                case let .failure(error):
+                    complete?(nil,error)
+                }
+            }
+        }
+    }
+    
+    //MARK: &lt;&gt;内部View
+    
+    //MARK: &lt;&gt;内部UI变量
+    //MARK: &lt;&gt;内部数据变量
+    public var infosObser = BehaviorSubject&lt;[T]?&gt;(value: nil)
+    
+    fileprivate var loadingPage:Int?
+    var curPage = 0
+    var countPerPage = 20
+    //MARK: &lt;&gt;内部block
+    
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>EB5D6778-BF7A-4F50-A4BC-8E928A6DBD52</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>atmakeviewmodel_pageload</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
