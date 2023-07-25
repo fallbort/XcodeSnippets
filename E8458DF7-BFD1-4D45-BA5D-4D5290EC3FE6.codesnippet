@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>atmakefollowbtnset</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>GlobalStatusKeeper.followStatus.changingObser.subscribe(onNext: { [weak self] uids in
+    guard let `self` = self else { return }
+    if uids.contains(where: {$0 == self.userInfo?.userId}) {
+        self.checkFollowStatus()
+    }
+}).disposed(by: self.mmDisposeBag)
+
+button.handleControlEvent(.touchUpInside) { [weak self,weak button] in
+    guard let `self` = self else {return}
+    guard let button = button else {return}
+    if let userInfo = self.userInfo {
+        if button.isSelectedFake == true {
+            GlobalStatusKeeper.unfollow(uid: userInfo.userId) { [weak self] result in
+                if case .success = result {
+                    self?.checkFollowStatus()
+                }
+            }
+        }else{
+            GlobalStatusKeeper.follow(uid: userInfo.userId) { [weak self] result in
+                if case .success = result {
+                    self?.checkFollowStatus()
+                }
+            }
+        }
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E8458DF7-BFD1-4D45-BA5D-4D5290EC3FE6</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>atmakefollowbtnset</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
