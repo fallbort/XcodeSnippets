@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>atmaketableviewdelegate</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>extension MeSettingVC : UITableViewDelegate,UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -&gt; CGFloat {
+        let cell = self.tableView(tableView, cellForRowAt: indexPath)
+        let size = cell.systemLayoutSizeFitting(CGSize.init(width: UIScreen.main.bounds.width, height: 0))
+        return size.height
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -&gt; CGFloat {
+        return UITableView.automaticDimension
+    }
+    func numberOfSections(in tableView: UITableView) -&gt; Int {
+        
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -&gt; UITableViewCell {
+        let cell = tableView.dequeueReusableCell(FbCommonSettingCell.self, forIndexPath: indexPath)
+        if indexPath.section &lt; self.viewModel.dataArray.count {
+            let data = self.viewModel.dataArray[indexPath.section]
+            
+        }
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -&gt; CGFloat {
+        return 0.0
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -&gt; UIView? {
+        return nil
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0B3303DB-3E58-41AB-8235-0EA9C7DDF9AA</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>atmaketableviewdelegate</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

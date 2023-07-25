@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ocmlinebreakview</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>-(LineBreakBaseViewOC *)nineImageView {
+    if (!_nineImageView) {
+        _nineImageView = [[LineBreakBaseViewOC alloc]init];
+        
+        _nineImageView.borderMargins = UIEdgeInsetsMake(0, 0, 0, 0);
+        _nineImageView.maxLine = 1;
+        
+        _nineImageView.marginX = 10.0;   //cell段间距
+        _nineImageView.marginY = 10.0;  //cell行间距
+        _nineImageView.breakMaxWidth = kScreenWidth - 80.0;
+        __weak __typeof(self)weakSelf = self;
+        _nineImageView.itemSizeClosure = ^(NSInteger index) {
+            CGFloat width = floor((kScreenWidth - 80.0 - 10.0 * 2.0) / 3.0);
+            return CGSizeMake(width, width);
+        };
+        
+        _nineImageView.itemLayoutClosure = ^UIView * _Nullable(CGRect frame, NSInteger index, UIView * _Nullable view, NSDictionary&lt;NSString *,id&gt; * _Nullable extra) {
+            __strong __typeof(weakSelf)strongSelf = weakSelf;
+            if(strongSelf==nil){return nil;}
+            UIView* newView = view;
+            if (newView == nil) {
+                
+            }
+            
+            return nil;
+        };
+    }
+    return _nineImageView;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>6765B03C-5360-49DF-AA40-D7ED040B4858</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ocmlinebreakview</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
