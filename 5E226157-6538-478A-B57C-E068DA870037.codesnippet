@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>atmaketableviewvc_create</string>
+	<string>atmaketableviewvc_create2</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
@@ -13,7 +13,7 @@
 import Cartography
 import MeMeKit
 
-class MeSettingVC : UIViewController {
+class PriceManagerVC : UIViewController {
     
     //MARK: &lt;&gt;外部变量
     
@@ -34,6 +34,8 @@ class MeSettingVC : UIViewController {
         self.memeNavBar.backgroundColor = .white
         self.memeNavBar.addLeftBtns(btns: [self.lyNavBackBtn])
         setupViews()
+        
+        self.loadData()
     }
     
     func setupViews() {
@@ -48,6 +50,36 @@ class MeSettingVC : UIViewController {
     }
     
     //MARK: &lt;&gt;功能性方法
+    
+    func loadData() {
+        resetData()
+    }
+    
+    func resetData() {
+        var datas:[CommonSettingCellData] = []
+        if true {
+            let commonData = CommonSettingCellData()
+            commonData.isCategory = true
+            let size = self.contentView.systemLayoutSizeFitting(CGSize(width: UIScreen.main.bounds.width, height: 0), withHorizontalFittingPriority: UILayoutPriority(999), verticalFittingPriority: UILayoutPriority(50))
+            commonData.cellHeight = size.height
+            commonData.extraViewAddBlock = { [weak self] (cell,data,posIndex) in
+                if posIndex == 0 {
+                    cell.addOrUpdateBlockView(reuseKey: "", posX: .center, spacer: [.fixLeft(0),.fixRight(0)],reuseable: false) { [weak self] oldView, posX in
+                        return self?.contentView
+                    }
+                }
+            }
+            datas.append(commonData)
+        }
+        self.datas = datas
+        resetLayout()
+    }
+    func resetLayout() {
+        self.delegateObject.dataArray = self.datas
+        self.tableView.reloadData()
+        
+    }
+    
     //MARK: &lt;&gt;内部View
     fileprivate lazy var tableView: UITableView = {
         let tableView: UITableView = UITableView(frame: CGRect(x: 0, y: 0, width: self.view.width, height: self.view.height))
@@ -67,6 +99,14 @@ class MeSettingVC : UIViewController {
         }
         return tableView
     }()
+    
+    var contentView: UIView = {
+        let view = UIView()
+        constrain(view) {
+            $0.height == 0 ~ 99
+        }
+        return view
+    }()
     //MARK: &lt;&gt;内部UI变量
     //MARK: &lt;&gt;内部数据变量
     lazy var delegateObject: CommonTDelegateObject = {
@@ -74,20 +114,23 @@ class MeSettingVC : UIViewController {
         object.inView = self.view
         return object
     }()
+    
+    lazy var datas:[CommonSettingCellData] = []
     //MARK: &lt;&gt;内部block
     
-}</string>
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>9C656E96-91A4-44C3-99E1-CC7BA18B81DC</string>
+	<string>5E226157-6538-478A-B57C-E068DA870037</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>atmaketableviewvc_create</string>
+	<string>atmaketableviewvc_create2</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

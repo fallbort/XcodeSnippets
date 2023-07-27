@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>atmakenotifykeyboard</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: nil) { [weak self] notify in
+    guard let `self` = self else {return}
+    if let view = self.textViews.first(where: {$0.textView.isFirstResponder}) {
+        let point = self.tableView.convert(CGPointZero, from: view)
+        var maxOffsetY = point.y - 100
+        maxOffsetY = maxOffsetY + self.tableView.contentInset.top &lt; 0 ? 0 - self.tableView.contentInset.top : maxOffsetY
+        let offset = CGPoint(x: 0, y: maxOffsetY)
+        DispatchQueue.main.async {
+            self.tableView.setContentOffset(offset, animated: true)
+        }
+        
+    }
+}
+NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: nil) { [weak self] notify in
+    guard let `self` = self else {return}
+    if self.textViews.first(where: {$0.textView.isFirstResponder}) != nil {
+        let curOffset = self.tableView.contentOffset
+        var maxOffsetY:CGFloat = self.tableView.contentSize.height - (self.tableView.bounds.height - self.tableView.contentInset.top - self.tableView.contentInset.bottom)
+        maxOffsetY = maxOffsetY + self.tableView.contentInset.top &lt; 0 ? 0 - self.tableView.contentInset.top : maxOffsetY
+        if curOffset.y &gt; maxOffsetY {
+            let offset = CGPoint(x: 0, y: maxOffsetY)
+            DispatchQueue.main.async {
+                self.tableView.setContentOffset(offset, animated: true)
+            }
+        }
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>214D63DF-A1B3-481D-9F91-1414BF33F18B</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>atmakenotifykeyboard</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
