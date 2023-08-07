@@ -16,7 +16,7 @@
                         if (error.description.count &gt; 0) {
                             HUD.flash2(error.description)
                         }else{
-                            HUD.flash2(NELocalize.localizedString("删除失败",comment: "totest"))
+                            HUD.flash2(NELocalize.localizedString("网络错误，请稍后重试",comment: "totest"))
                         }
                     }</string>
 	<key>IDECodeSnippetIdentifier</key>
@@ -30,6 +30,6 @@
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

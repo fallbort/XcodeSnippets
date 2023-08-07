@@ -3,23 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ocmcheckemptynull</string>
+	<string>atmakecommondata</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>if (pic_info_obj == nil || [pic_info_obj isEqual:[NSNull null]]) {
-        pic_info_obj = @[];
-    }</string>
+	<string>let commonData = (self.plugin?.totalData?.commonData as? MediaPluginCommonData)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>0A70E008-A941-4698-BB1B-6DDC63B6BD5B</string>
+	<string>4D20B34F-9031-4C8C-9B44-00D9C96F9725</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>ocmcheckemptynull</string>
+	<string>atmakecommondata</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

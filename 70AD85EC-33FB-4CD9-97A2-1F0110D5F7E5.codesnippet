@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>atmakecreateplugin_vm</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import Foundation
+import MeMeKit
+import MeMeCustomPods
+
+class BroadStartVM : DisposeBagProtocol,MMPluginStageProtocol {
+    
+    //MARK: &lt;&gt;外部变量
+    weak var plugin:BroadStartProtocol?
+    
+    //MARK: &lt;&gt;外部block
+    
+    
+    //MARK: &lt;&gt;生命周期开始
+    init() {
+        
+    }
+    
+    func didPluginConfiged() {
+        
+    }
+    
+    func clean() {
+        
+    }
+    //MARK: &lt;&gt;功能性方法
+    
+    //MARK: &lt;&gt;内部View
+    
+    //MARK: &lt;&gt;内部UI变量
+    //MARK: &lt;&gt;内部数据变量
+    
+    //MARK: &lt;&gt;内部block
+    
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>70AD85EC-33FB-4CD9-97A2-1F0110D5F7E5</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>atmakecreateplugin_vm</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
