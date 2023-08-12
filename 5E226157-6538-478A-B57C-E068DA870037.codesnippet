@@ -30,11 +30,11 @@ class PriceManagerVC : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.memeNavBar.tilte = "接单管理"
+        self.memeNavBar.tilte = NELocalize.localizedString("收入明细",comment: "totest")
         self.memeNavBar.backgroundColor = .white
         self.memeNavBar.addLeftBtns(btns: [self.lyNavBackBtn])
         setupViews()
-        
+
         self.loadData()
     }
     

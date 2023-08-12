@@ -30,12 +30,13 @@ class RealNameAuthVC : LYBaseSettingVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.memeNavBar.tilte = "实名认证"
+        self.memeNavBar.tilte = NELocalize.localizedString("收入明细",comment: "totest")
         self.memeNavBar.backgroundColor = .white
         self.memeNavBar.addLeftBtns(btns: [self.lyNavBackBtn])
         var contentInset = self.tableView.contentInset
         contentInset.top = 16
         self.tableView.contentInset = contentInset
+
     }
     
     override func setupViews() {

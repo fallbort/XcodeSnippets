@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>atmakeextraviewblock</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>commonData.extraViewAddBlock = { [weak self] (cell,data,posIndex) in
+                if posIndex == 0 {
+                    cell.addOrUpdateBlockView(reuseKey: "", posX: .center, spacer: [.fixLeft(0),.fixRight(0)],reuseable: false) { [weak self] oldView, posX in
+                        return self?.priceListView
+                    }
+                }
+            }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>CB1E9211-C775-45F4-A74B-D4EAED5A3E3C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>atmakeextraviewblock</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

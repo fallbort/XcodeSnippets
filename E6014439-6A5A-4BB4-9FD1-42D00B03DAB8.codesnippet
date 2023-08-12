@@ -32,7 +32,13 @@ class ChatHistoryListVC : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.memeNavBar.tilte = "交易明细"
+        self.memeNavBar.addLeftBtns(btns: [self.lyNavBackBtn])
+        self.memeNavBar.backgroundColor = .white
+        self.view.backgroundColor = UIColor.hexString(toColor: "f8f8f8")
         setupViews()
+        
+        self.loadData()
     }
     
     func setupViews() {
@@ -40,7 +46,7 @@ class ChatHistoryListVC : UIViewController {
         constrain(self.tableView) {
             $0.left == $0.superview!.left
             $0.right == $0.superview!.right
-            $0.top == $0.superview!.top
+            $0.top == $0.superview!.top + MeMeNavigationBar.fixHeight
             $0.bottom == $0.superview!.bottom
         }
     }
