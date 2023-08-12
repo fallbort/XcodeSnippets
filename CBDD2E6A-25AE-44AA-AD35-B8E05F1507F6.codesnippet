@@ -3,39 +3,30 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>atmakemapperstruct</string>
+	<string>atmakeswitchresult</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>import ObjectMapper
-
-struct HQActivity: Mappable, CustomStringConvertible {
-    init() {
-        
-    }
-    
-    init?(map: Map) {
-    }
-    
-    mutating func mapping(map: Map) {
-        url       &lt;- map["url"]
-    }
-    
-    var description: String {
-        return ""
-    }
-    
-}</string>
+	<string>switch result {
+                    case let .success(info):
+                        break
+                    case let .failure(error):
+                        if (error.description.count &gt; 0) {
+                            HUD.flash2(error.description)
+                        }else{
+                            HUD.flash2(NELocalize.localizedString("网络错误，请稍后重试",comment: "totest"))
+                        }
+                    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>1A3A0EE7-0E11-4A36-848C-D4BC44E13B8B</string>
+	<string>CBDD2E6A-25AE-44AA-AD35-B8E05F1507F6</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>atmakemapperstruct</string>
+	<string>atmakeswitchresult</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

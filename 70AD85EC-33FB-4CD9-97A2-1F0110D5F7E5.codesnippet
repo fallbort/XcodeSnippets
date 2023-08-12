@@ -3,39 +3,54 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>atmakemapperstruct</string>
+	<string>atmakecreateplugin_vm</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>import ObjectMapper
+	<string>import Foundation
+import MeMeKit
+import MeMeCustomPods
 
-struct HQActivity: Mappable, CustomStringConvertible {
+class BroadStartVM : DisposeBagProtocol,MMPluginStageProtocol {
+    
+    //MARK: &lt;&gt;外部变量
+    weak var plugin:BroadStartProtocol?
+    
+    //MARK: &lt;&gt;外部block
+    
+    
+    //MARK: &lt;&gt;生命周期开始
     init() {
         
     }
     
-    init?(map: Map) {
+    func didPluginConfiged() {
+        
     }
     
-    mutating func mapping(map: Map) {
-        url       &lt;- map["url"]
+    func clean() {
+        
     }
+    //MARK: &lt;&gt;功能性方法
     
-    var description: String {
-        return ""
-    }
+    //MARK: &lt;&gt;内部View
+    
+    //MARK: &lt;&gt;内部UI变量
+    //MARK: &lt;&gt;内部数据变量
+    
+    //MARK: &lt;&gt;内部block
     
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>1A3A0EE7-0E11-4A36-848C-D4BC44E13B8B</string>
+	<string>70AD85EC-33FB-4CD9-97A2-1F0110D5F7E5</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>atmakemapperstruct</string>
+	<string>atmakecreateplugin_vm</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

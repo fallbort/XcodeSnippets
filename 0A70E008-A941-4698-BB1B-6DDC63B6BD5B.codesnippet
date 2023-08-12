@@ -3,39 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>atmakemapperstruct</string>
+	<string>ocmcheckemptynull</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>import ObjectMapper
-
-struct HQActivity: Mappable, CustomStringConvertible {
-    init() {
-        
-    }
-    
-    init?(map: Map) {
-    }
-    
-    mutating func mapping(map: Map) {
-        url       &lt;- map["url"]
-    }
-    
-    var description: String {
-        return ""
-    }
-    
-}</string>
+	<string>if (pic_info_obj == nil || [pic_info_obj isEqual:[NSNull null]]) {
+        pic_info_obj = @[];
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>1A3A0EE7-0E11-4A36-848C-D4BC44E13B8B</string>
+	<string>0A70E008-A941-4698-BB1B-6DDC63B6BD5B</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>atmakemapperstruct</string>
+	<string>ocmcheckemptynull</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

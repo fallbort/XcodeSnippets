@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>atmakecreateplugin_class</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import Foundation
+import MeMeKit
+import MeMeCustomPods
+
+class BroadStartPlugin : BroadStartProtocol {
+    
+    
+    //MARK: &lt;&gt;外部变量
+    
+    //MARK: &lt;&gt;外部block
+    
+    
+    //MARK: &lt;&gt;生命周期开始
+    init() {
+        viewController.viewModel.plugin = self
+        viewController.plugin = self
+    }
+    func didPluginConfiged() {
+        self.viewController.viewModel.didPluginConfiged()
+        self.viewController.didPluginConfiged()
+    }
+    
+    func didAllPluginLoaded(plugins:[MMPluginProtocol]) {
+        self.viewController.viewModel.didAllPluginLoaded(plugins: plugins)
+        self.viewController.didAllPluginLoaded(plugins: plugins)
+        
+    }
+    
+    func didNewPluginLoaded(_ newPlugins:[MMPluginProtocol]) {
+        self.viewController.viewModel.didNewPluginLoaded(newPlugins)
+        self.viewController.didNewPluginLoaded(newPlugins)
+        
+    }
+    
+    func didOldPluginRemoved(_ oldPlugins:[MMPluginProtocol]) {
+        self.viewController.viewModel.didOldPluginRemoved(oldPlugins)
+        self.viewController.didOldPluginRemoved(oldPlugins)
+        
+    }
+    
+    func clean() {
+        self.viewController.viewModel.clean()
+        self.viewController.clean()
+    }
+    
+    //MARK: &lt;&gt;功能性方法
+    
+    
+    //MARK: &lt;&gt;内部View
+    
+    //MARK: &lt;&gt;内部UI变量
+    //MARK: &lt;&gt;内部数据变量
+    lazy var viewController:BroadStartVC = {
+        let loader = BroadStartVC()
+        return loader
+    }()
+    
+    //MARK: &lt;&gt;内部block
+    
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7F72863A-EAD4-49C5-9B2C-950E5A874E8B</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>atmakecreateplugin_class</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

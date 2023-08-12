@@ -3,39 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>atmakemapperstruct</string>
+	<string>atmakeloginobser</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>import ObjectMapper
-
-struct HQActivity: Mappable, CustomStringConvertible {
-    init() {
-        
-    }
-    
-    init?(map: Map) {
-    }
-    
-    mutating func mapping(map: Map) {
-        url       &lt;- map["url"]
-    }
-    
-    var description: String {
-        return ""
-    }
-    
-}</string>
+	<string>AccountManager.shared.curAccountObser.subscribe(onNext: { [weak self] value in
+            guard let `self` = self else { return }
+            if value.oldOne != nil,value.newOne == nil {
+                
+            }else if let uid = value.newOne?.uid, uid &gt; 0 &amp;&amp; value.oldOne?.uid != value.newOne?.uid {
+                self.login(uid: uid)
+            }
+        }).disposed(by: self.mmDisposeBag)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>1A3A0EE7-0E11-4A36-848C-D4BC44E13B8B</string>
+	<string>F62AFB48-8D98-46D4-8EFB-491A0F6124F1</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>atmakemapperstruct</string>
+	<string>atmakeloginobser</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

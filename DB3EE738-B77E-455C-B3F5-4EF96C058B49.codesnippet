@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>atmakealertview_ly</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>let vc = LYAlertViewController()
+vc.addCancel(title: NELocalize.localizedString("取消",comment: "totest"), block: nil)
+vc.addTitle(title: NELocalize.localizedString("退出登录",comment: "totest"), content: NELocalize.localizedString("退出后你将无法收到别人的私信、视频及语音邀请，是否继续？",comment: "totest"))
+vc.addComfirm(title: NELocalize.localizedString("确定",comment: "totest")) { [weak self] in
+    let vc = PriceManagerVC()
+    self?.navigationController?.pushViewController(vc, animated: true)
+}
+vc.show(svc: self)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>DB3EE738-B77E-455C-B3F5-4EF96C058B49</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>atmakealertview_ly</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

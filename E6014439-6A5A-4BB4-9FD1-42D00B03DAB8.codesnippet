@@ -141,12 +141,12 @@ class ChatHistoryListVC : UIViewController {
         tableView.scrollsToTop = true
         tableView.dataSource = self
         tableView.delegate = self
-        let extraBottom = MeMeMainTabBar.fixHeight
+        let extraBottom = UIWindow.keyWindowSafeAreaInsets().bottom &gt; 0 ? UIWindow.keyWindowSafeAreaInsets().bottom : 10
         tableView.contentInset = UIEdgeInsets.init(top: 12, left: 0, bottom: extraBottom, right: 0)
         tableView.emptyView = emptyView
         tableView.mj_header = createRefreshHeader()
         tableView.mj_footer = createRefreshFooter()
-        tableView.scrollEnabledWhenEmpty = false
+        tableView.scrollEnabledWhenEmpty = true
         tableView.backgroundColor = UIColor.clear
         if #available(iOS 15.0, *) {
             tableView.sectionHeaderTopPadding = 0

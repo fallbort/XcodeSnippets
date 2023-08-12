@@ -3,39 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>atmakemapperstruct</string>
+	<string>atmakemaskviewlazy</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>import ObjectMapper
-
-struct HQActivity: Mappable, CustomStringConvertible {
-    init() {
-        
-    }
-    
-    init?(map: Map) {
-    }
-    
-    mutating func mapping(map: Map) {
-        url       &lt;- map["url"]
-    }
-    
-    var description: String {
-        return ""
-    }
-    
-}</string>
+	<string>fileprivate lazy var bgMaskView: VisualEffectView = {
+        let effect = UIVisualEffect()
+        let view = VisualEffectView(effect: effect)
+        view.effect = UIBlurEffect(style: .dark)
+        return view
+    }()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>1A3A0EE7-0E11-4A36-848C-D4BC44E13B8B</string>
+	<string>29AC8553-7D07-422E-9934-420EF16717F8</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>atmakemapperstruct</string>
+	<string>atmakemaskviewlazy</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

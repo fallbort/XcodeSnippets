@@ -3,39 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>atmakemapperstruct</string>
+	<string>atmakecommondata</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>import ObjectMapper
-
-struct HQActivity: Mappable, CustomStringConvertible {
-    init() {
-        
-    }
-    
-    init?(map: Map) {
-    }
-    
-    mutating func mapping(map: Map) {
-        url       &lt;- map["url"]
-    }
-    
-    var description: String {
-        return ""
-    }
-    
-}</string>
+	<string>let commonData = (self.plugin?.totalData?.commonData as? MediaPluginCommonData)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>1A3A0EE7-0E11-4A36-848C-D4BC44E13B8B</string>
+	<string>4D20B34F-9031-4C8C-9B44-00D9C96F9725</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>atmakemapperstruct</string>
+	<string>atmakecommondata</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
