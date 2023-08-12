@@ -3,29 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ocmlazylabel</string>
+	<string>ocmcolortitlegray</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>-(UILabel *)dateLabel {
-    if (!_dateLabel) {
-        _dateLabel = [[UILabel alloc]init];
-        _dateLabel.font = FFontSmall;
-        _dateLabel.textAlignment = NSTextAlignmentLeft;
-        _dateLabel.textColor = MKTVRGBA(153, 153, 153, 1);
-    }
-    return _dateLabel;
-}</string>
+	<string>[UIColor hexStringToColor:@"a0a0a0"];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>EF263D06-553F-4F6D-8E65-240306C10963</string>
+	<string>9F04CCD7-B6E1-4D6C-BB8E-8A9BB775D078</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>ocmlazylabel</string>
+	<string>ocmcolortitlegray</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
