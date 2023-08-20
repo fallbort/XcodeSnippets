@@ -11,7 +11,7 @@
 	<key>IDECodeSnippetContents</key>
 	<string>commonData.extraViewAddBlock = { [weak self] (cell,data,posIndex) in
                 if posIndex == 0 {
-                    cell.addOrUpdateBlockView(reuseKey: "", posX: .center, spacer: [.fixLeft(0),.fixRight(0)],reuseable: false) { [weak self] oldView, posX in
+                    cell.addOrUpdateBlockView(reuseKey: "", posX: .center, spacer: [.fixLeft(0),.fixRight(0)],posY: [.top,.bottom],reuseable: false) { [weak self] oldView, posX in
                         return self?.priceListView
                     }
                 }
