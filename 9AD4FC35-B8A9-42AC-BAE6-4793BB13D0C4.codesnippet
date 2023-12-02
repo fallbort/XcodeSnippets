@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>atmakecreateplugin_vc</string>
+	<string>atmcreateplugin_vc</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
@@ -54,7 +54,7 @@ class BroadStartVC :DisposeBagProtocol, MMPluginStageProtocol {
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>atmakecreateplugin_vc</string>
+	<string>atmcreateplugin_vc</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

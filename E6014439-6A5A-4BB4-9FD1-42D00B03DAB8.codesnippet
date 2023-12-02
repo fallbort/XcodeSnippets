@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>atmakevc_tableview</string>
+	<string>atmvc_tableview</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
@@ -219,7 +219,7 @@ extension ChatHistoryListVC : UITableViewDelegate,UITableViewDataSource {
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>atmakevc_tableview</string>
+	<string>atmvc_tableview</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>atmakemapperstruct</string>
+	<string>atmmapperstruct</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
@@ -35,7 +35,7 @@ struct HQActivity: Mappable, CustomStringConvertible {
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>atmakemapperstruct</string>
+	<string>atmmapperstruct</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

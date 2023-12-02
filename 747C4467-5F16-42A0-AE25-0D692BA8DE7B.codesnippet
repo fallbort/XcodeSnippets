@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>atmakecreaterankvc</string>
+	<string>atmcreaterankvc</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
@@ -117,7 +117,7 @@ class ContactVc : MMRankController {
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>atmakecreaterankvc</string>
+	<string>atmcreaterankvc</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

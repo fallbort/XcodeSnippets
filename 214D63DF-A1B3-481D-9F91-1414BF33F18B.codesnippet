@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>atmakenotifykeyboard</string>
+	<string>atmnotifykeyboard</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
@@ -43,7 +43,7 @@ NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNoti
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>atmakenotifykeyboard</string>
+	<string>atmnotifykeyboard</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>atmakeviewmodel_pageload</string>
+	<string>atmviewmodel_pageload</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
@@ -80,7 +80,7 @@ class CommonLoadViewModel&lt;T:BaseMappable,V:MemeTargetType&gt; {
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>atmakeviewmodel_pageload</string>
+	<string>atmviewmodel_pageload</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
