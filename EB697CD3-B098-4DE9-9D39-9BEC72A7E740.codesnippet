@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>mwmmodulemake</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import Foundation
+import MWCommon
+import MWModuleCenterKit
+
+class ButtonGroupsModule: MWLiveRoomModule {
+    
+    override func moduleRun() {
+        super.moduleRun()
+    }
+    override func moduleDidLoad() {
+        super.moduleDidLoad()
+        
+    }
+    
+    override func receiveMessage(_ message: MWMessage) {
+        if message.identifier == MWLiveRoomMessageIdentifierCloseLiveRoom || message.identifier == MWLiveRoomMessageIdentifierChangeLiveRoom {
+           
+        }
+    }
+    
+    override func moduleDestory() {
+        super.moduleDestory()
+    }
+        
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>EB697CD3-B098-4DE9-9D39-9BEC72A7E740</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>mwmmodulemake</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

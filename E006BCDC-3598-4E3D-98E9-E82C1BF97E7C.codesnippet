@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>mwmworkitem</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>func sendContent(content: String) {
+        let curKey = Int64.getNextMid()
+        let item = DispatchWorkItem { [weak self] in
+            guard let `self` = self else {return}
+            self.sendWorkItems.removeValue(forKey: curKey)
+            
+            
+        }
+        self.sendWorkItems[curKey] = item
+        self.sendQueue.async(execute: item)
+    }
+    
+    func clear() {
+        self.sendWorkItems.forEach { (key, item) in
+            item.cancel()
+        }
+        self.sendWorkItems.removeAll()
+    }
+    
+    fileprivate lazy var sendWorkItems:[Int64:DispatchWorkItem] = [:]
+    
+    fileprivate lazy var sendQueue: DispatchQueue = {
+        let queue = DispatchQueue(label: "com.mwchat.sendQueue")
+        return queue
+    }()</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E006BCDC-3598-4E3D-98E9-E82C1BF97E7C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>mwmworkitem</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
