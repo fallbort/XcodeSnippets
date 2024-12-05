@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string></string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//line
+        params.view.addCLViewInvisibleBtn(pos: &lt;#T##MWCombinedPosition#&gt;, main: &lt;#T##[MWCombinedMainConstraint]#&gt;, other: &lt;#T##[MWCombinedOtherConstraint]#&gt;,defaultBlock: &lt;#T##((UIButton) -&gt; ())?##((UIButton) -&gt; ())?##(_ view: UIButton) -&gt; ()#&gt;) { [weak self] view in
+            guard let `self` = self else {return}
+            
+        }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7F22B58B-88BA-4D6B-887A-584D2170567B</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>My Code Snippet</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

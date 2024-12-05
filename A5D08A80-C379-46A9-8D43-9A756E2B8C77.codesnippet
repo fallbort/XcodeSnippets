@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>mwmcombinelayoutmodels</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>let item1 = MWCombinedScrollModel(cellTypeSelector: .init(target: self, selector: #selector(makeCelllUI(_:))))
+        let item2 = MWCombinedScrollModel(cellTypeSelector: .init(target: self, selector: #selector(makeCelllUI(_:))))
+        self.combinedScrollModels = [item1,item2]
+        self.tableView.reloadData()</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>A5D08A80-C379-46A9-8D43-9A756E2B8C77</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>mwmcombinelayoutmodels</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

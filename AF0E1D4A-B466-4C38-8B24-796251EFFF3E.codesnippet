@@ -3,46 +3,36 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>mwmmodulemake</string>
+	<string></string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>import Foundation
-import MWCommon
-import MWModuleCenterKit
+	<string>import UIKit
 
-class ButtonGroupsModule: MWLiveRoomModule {
+public class CLT_Fragment: MWCombinedFragment {
+    //view
+    public weak var view:UIImageView?
     
-    override func moduleRun() {
-        super.moduleRun()
-    }
-    override func moduleDidLoad() {
-        super.moduleDidLoad()
-        
-    }
-    
-    override func receiveMessage(_ message: MWMessage) {
-        if message.identifier == MWLiveRoomMessageIdentifierCloseLiveRoom || message.identifier == MWLiveRoomMessageIdentifierChangeLiveRoom {
-           
+    public override func addCombineViews(_ parentView: UIView) {
+        super.addCombineViews(parentView)
+        do {
+            //image
+            let data = parentView.addCLViewEmptyImageView(pos: &lt;#T##MWCombinedPosition#&gt;, main: [], other: [], updateBlock: nil)
+            view = data.view
         }
     }
-    
-    override func moduleDestory() {
-        super.moduleDestory()
-    }
-        
 }
 </string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>EB697CD3-B098-4DE9-9D39-9BEC72A7E740</string>
+	<string>AF0E1D4A-B466-4C38-8B24-796251EFFF3E</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>mwmmodulemake</string>
+	<string>My Code Snippet</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

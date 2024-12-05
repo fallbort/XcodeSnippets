@@ -3,46 +3,39 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>mwmmodulemake</string>
+	<string>mwmcreatevc</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>import Foundation
-import MWCommon
-import MWModuleCenterKit
+	<string>import UIKit
 
-class ButtonGroupsModule: MWLiveRoomModule {
-    
-    override func moduleRun() {
-        super.moduleRun()
+class MWVC : UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configDefault()
+        setupUI()
     }
-    override func moduleDidLoad() {
-        super.moduleDidLoad()
+    
+    fileprivate func configDefault() {
         
     }
     
-    override func receiveMessage(_ message: MWMessage) {
-        if message.identifier == MWLiveRoomMessageIdentifierCloseLiveRoom || message.identifier == MWLiveRoomMessageIdentifierChangeLiveRoom {
-           
-        }
-    }
-    
-    override func moduleDestory() {
-        super.moduleDestory()
-    }
+    fileprivate func setupUI() {
         
+    }
 }
+
 </string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>EB697CD3-B098-4DE9-9D39-9BEC72A7E740</string>
+	<string>6D0E7E20-5D18-479C-B735-9AA70A55E0A3</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>mwmmodulemake</string>
+	<string>mwmcreatevc</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
