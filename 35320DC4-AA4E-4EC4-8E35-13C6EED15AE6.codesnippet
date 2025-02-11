@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>mwmconfigScrollProtocol</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>fileprivate func setupUI() {
+    self.configCombinedScroll(self.collectionView)
+    
+    self.view.addSubview(self.collectionView)
+    self.collectionView.snp.makeConstraints { make in
+        make.edges.equalToSuperview()
+    }
+    
+    var scrollModels:[MWCombinedScrollModel] = []
+    for model in self.models ?? [] {
+        var model = MWCombinedScrollModel(target: self, selector: #selector(makeCell(_:)))
+        model.data = model
+        scrollModels.append(model)
+    }
+    self.combinedScrollModels = scrollModels
+    self.collectionView.reloadData()
+}
+
+@objc func makeCell(_ params:MWCombinedScrollParams) {
+    let model = params.data as? MWLiveBussinessModel
+    
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>35320DC4-AA4E-4EC4-8E35-13C6EED15AE6</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>mwmconfigScrollProtocol</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

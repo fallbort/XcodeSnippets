@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string></string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>fileprivate func setupUI() {
+        self.configCombinedScroll(self.collectionView)
+        
+        var scrollModels:[MWCombinedScrollModel] = []
+        for model in self.models ?? [] {
+            var model = MWCombinedScrollModel(target: self, selector: #selector(makeCell(_:)))
+            model.data = model
+            scrollModels.append(model)
+        }
+        self.combinedScrollModels = scrollModels
+        self.collectionView.reloadData()
+    }
+    
+    @objc func makeCell(_ params:MWCombinedScrollParams) {
+        let model = params.data as? MWLiveBussinessModel
+        
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>D35CDB36-5B83-4C28-81AA-76CE3149EE7E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>My Code Snippet</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

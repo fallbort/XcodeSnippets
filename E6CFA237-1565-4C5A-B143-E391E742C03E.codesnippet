@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>tgcreatevc</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>class TGMeEnteranceVC  : UIViewController, TGNavBarProtocol {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.addNavBar()
+        self.view.backgroundColor = .blue
+        
+        makeViews()
+    }
+    
+    func makeViews() {
+        
+    }
+    
+    fileprivate lazy var viewModel = TGMeEnteranceVM()
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E6CFA237-1565-4C5A-B143-E391E742C03E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>tgcreatevc</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

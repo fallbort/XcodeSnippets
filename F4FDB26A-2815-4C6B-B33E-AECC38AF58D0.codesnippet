@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>mwmcombinesub</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>view.addCLViewEmptyView(direction: .vertical,pos: .front, main: [.fixPreFront(0),.itemLen(43)], other: [.fixSuperFront(0),.fixSuperBack(0)], defaultBlock: nil) { [weak self] view in
+                guard let `self` = self else {return}
+                view.commintCombineUI { [weak self] view in
+                    guard let `self` = self else {return}
+                    
+                }
+            }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F4FDB26A-2815-4C6B-B33E-AECC38AF58D0</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>mwmcombinesub</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

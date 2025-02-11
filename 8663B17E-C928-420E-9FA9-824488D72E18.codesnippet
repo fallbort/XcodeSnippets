@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>mwmcreateimcell</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import NEChatUIKit
+import UIKit
+import MWCommon
+
+
+class MWImBussinessAssistantChatCell : ChatMessageTextCell {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    }
+    
+    override func commonUI() {
+        super.commonUI()
+        removeAvatarImg()
+        
+    }
+    
+    override open func showLeftOrRight(showRight: Bool) {
+      super.showLeftOrRight(showRight: showRight)
+      
+
+    }
+
+  override func setModel(_ model: MessageContentModel, _ isSend: Bool) {
+      super.setModel(model, isSend)
+      
+  }
+    
+}
+
+extension MWImBussinessAssistantChatCell {
+    /// 去除头像
+    func removeAvatarImg() {
+      NSLayoutConstraint.deactivate(avatarImageLeft.constraints)
+      NSLayoutConstraint.activate([
+        avatarImageLeft.widthAnchor.constraint(equalToConstant: 0),
+        avatarImageLeft.heightAnchor.constraint(equalToConstant: 0),
+      ])
+      NSLayoutConstraint.deactivate(avatarImageRight.constraints)
+      NSLayoutConstraint.activate([
+        avatarImageRight.widthAnchor.constraint(equalToConstant: 0),
+        avatarImageRight.heightAnchor.constraint(equalToConstant: 0),
+      ])
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>8663B17E-C928-420E-9FA9-824488D72E18</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>mwmcreateimcell</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
